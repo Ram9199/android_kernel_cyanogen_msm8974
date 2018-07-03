@@ -269,7 +269,7 @@ static void def_work_fn(struct work_struct *work)
 	rq_info.def_interval = (unsigned int) diff;
 
 	if (!rq_info.hotplug_enabled)
-		return 0;
+		return;
 
 	/* Notify polling threads on change of value */
 	sysfs_notify(rq_info.kobj, NULL, "def_timer_ms");
