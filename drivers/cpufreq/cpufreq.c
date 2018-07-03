@@ -1599,9 +1599,7 @@ int __cpufreq_driver_target(struct cpufreq_policy *policy,
 		return 0;
 
 	if (cpufreq_driver->target)
->
 		retval = cpufreq_driver->target(policy, target_freq, relation);
-
 	return retval;
 }
 EXPORT_SYMBOL_GPL(__cpufreq_driver_target);
